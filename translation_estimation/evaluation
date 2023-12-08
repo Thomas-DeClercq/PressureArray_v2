@@ -1,0 +1,36 @@
+only_trans - 100k samples generated:
+100 trainingsamples     --> average error: 67.4 mm (med: 2.89 mm) - trainingtime: 0h1m
+1.000 trainingsamples   --> average error: 46.2 mm (med: 1.60 mm) - trainingtime: 0h5m
+10.000 trainingsamples  --> average error: 2.31 mm (med: 1.78 mm) - trainingtime: 0h53m
+50.000 trainingsamples  --> average error: 2.08 mm (med: 1.60 mm) - trainingtime: 5h40m
+100.000 trainingsamples --> average error: 2.06 mm (med: 1.54 mm) - trainingtime: 15h45m
+
+trans_rot - 150k samples generated:
+100 trainingsamples     --> dist error: 22.3 mm (bad/okay) & angle error: 482° (bad) - trainingtime: 0h1m
+1.000 trainingsamples   --> dist error: 11.3 mm (okay/bad) & angle error: 172° (bad) - trainingtime: 0h5m
+10.000 trainingsamples  --> dist error: 2.62 mm (okay/good) & angle error: 16.3° (bad) - trainingtime: 0h53m
+30.000 trainingsamples  --> dist error: 2.58 mm (good/okay) & angle error: 15.3° (bad) - trainingtime: 2h54m
+150.000 trainingsamples  --> dist error: 2.54 mm (okay/good) & angle error: 14.5° (bad) - trainingtime: 34h9m
+150.000 trainingsamples (it=5)  --> dist error: 2.57 mm (okay/good) & angle error: 14.3° (bad) - trainingtime: 5days
+
+baro - 1.000 trainingsamples   --> dist error: 3.07 mm (bad/okay) & angle error: 20.6° (bad) - trainingtime: 0h5m
+baro - 10.000 trainingsamples  --> dist error: 2.67 mm (okay) & angle error: 16.2° (bad) - trainingtime: 0h56m
+baro - 50.000 trainingsamples  --> dist error: 2.65 mm (okay/bad) & angle error: 12.9° (bad) - trainingtime: 13h46m
+
+only_trans_NN_1it_50k   --> dist error: 2.67 mm (2.02 mm) - okay/good
+only_trans_NN_1it_100k  --> dist error: 2.66 mm (1.98 mm) - good
+rot_NN_1it_100k         --> angle error: 23.7° (13.5°) - bad
+
+trans_rot-rot:
+only_trans_NN_1it_100k  --> dist error: 4.47 mm (4.71 mm) - okay
+rot_NN_1it_100k         --> angle error: 11.1° (5.9°) - okay
+
+trans_rot-trans:
+only_trans_NN_1it_100k  --> dist error: 1.94 mm (1.48 mm) - good
+rot_NN_1it_100k         --> angle error: 44° (41°) - bad
+
+trans_rot-trans_rot:
+only_trans_NN_1it_100k  --> dist error: 1.59 mm (1.23 mm) - good
+rot_NN_1it_100k         --> angle error: 15.9° (9.3°) - okay
+
+only rotation - angle error: 5-10° (for angles up to 90°)
